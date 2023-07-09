@@ -1,2 +1,2 @@
 # EnergyDirectAuctions
-Designing and implementing Local Energy Market application using Blockchain technologies
+Designing and implementing a Local Energy Market application using Blockchain technologies
