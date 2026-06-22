@@ -12,7 +12,7 @@ parity now comes from a Chainlink Data Feed (a `MockPriceFeed`/`MockV3Aggregator
 locally) and the recurring settlement is driven by Chainlink Automation
 (`checkUpkeep`/`performUpkeep`) instead of the old timed Provable query.
 
-## Running on a local node
+### Running on a local node
 
 All commands are run from `project_files/`.
 
@@ -62,7 +62,7 @@ All commands are run from `project_files/`.
 To sanity-check the whole flow in-process (no separate node), run
 `npx hardhat run scripts/verify-migration.ts`.
 
-### Overriding deploy parameters
+#### Overriding deploy parameters
 
 `decimals`, `initialAnswer`, and `interval` are Ignition parameters. To change one
 (e.g. a shorter interval for testing), pass a parameters file:
@@ -72,7 +72,7 @@ echo '{ "EnergyAuction": { "interval": 20 } }' > params.json
 npx hardhat ignition deploy ignition/modules/EnergyAuction.ts --parameters params.json --network localhost
 ```
 
-## Example: a 2-seller / 2-buyer auction
+### Example: a 2-seller / 2-buyer auction
 
 Run this against a node that already has a fresh deployment (steps 1–2 above).
 Open a console:
