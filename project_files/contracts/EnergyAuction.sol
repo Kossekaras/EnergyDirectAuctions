@@ -37,7 +37,7 @@ contract EnergyAuction is usingProvable {
 		deployer = msg.sender;
 	}
 
-	// final addition - previously deployer first called 'newCycle'
+	//final addition - previously deployer first called 'newCycle'
 	function initiate () public {
 		require(msg.sender == deployer, "Only the deployer can make this call");
 		if (period == 0) {
