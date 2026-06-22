@@ -1,0 +1,4 @@
+node_modules
+artifacts
+cache
+project_files/ignition/deployments/
