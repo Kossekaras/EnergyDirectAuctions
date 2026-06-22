@@ -32,13 +32,12 @@ All commands are run from `project_files/`.
    ```
 
    The printed addresses (`EnergyAuction#MockPriceFeed`, `EnergyAuction#EnergyAuction`)
-   are saved under `ignition/deployments/chain-31337/`. Override the defaults with
-   Ignition parameters (`decimals`, `initialAnswer`, `interval`).
+   are saved under `ignition/deployments/chain-31337/`. The deploy defaults can be
+   overridden — see "Overriding deploy parameters" below.
 
 3. **Drive the settlement cycles.** Chainlink Automation does not run against a
-   local node, so `scripts/keeper.ts` plays the keeper: it polls the auction and
-   calls `performUpkeep` once a cycle is due (addresses are read from the Ignition
-   deployment automatically).
+   local node, so `scripts/keeper.ts` plays the keeper (addresses are read from the
+   Ignition deployment automatically).
 
    ```bash
    npx hardhat run scripts/keeper.ts --network localhost   # runs cycles continuously (Ctrl-C to stop)
